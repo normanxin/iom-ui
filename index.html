@@ -2,20 +2,22 @@
 <html ng-app="iom-app">
   <head>
     <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="angular-chart.css">
     <meta charset="utf-8">
     <title>Sankey Diagram</title>
   </head>
   <body>
-    <!-- <div id="context"></div> -->
     <context></context>
-    <div id="middle"><div>
+    <roi></roi>
     <div id="chart"></div>
-    <div id="compare"></div>
+    <script src="Chart.js"></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" charset="utf-8"></script>
     <script src="sankey.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" charset="utf-8"></script>
+    <script src="angular-chart.js"></script>
     <script src="index.js"></script>
     <script src="app.js"></script>
     <script src="context.js"></script>
+    <script src="roi.js"></script>
   </body>
 </html>
