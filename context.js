@@ -4,6 +4,14 @@ angular.module('iom-app')
     restrict: 'E',
     //transclude: true,
     scope: {},
-    template: '<div>asdf</div>'
+    templateUrl: 'context.html',
+    link: function(scope) {
+    	    scope.names = [
+    	       {timestap: 1, state: 2, clicks: 3, impressions: 4},
+    	       {timestap: 1, state: 2, clicks: 3, impressions: 4},
+    	       {timestap: 1, state: 2, clicks: 3, impressions: 4},
+    	       {timestap: 1, state: 2, clicks: 3, impressions: 4},
+    	    ];
+    }
   };
 });;
