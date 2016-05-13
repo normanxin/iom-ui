@@ -403,6 +403,21 @@ var energy = {
   ]
 };
 
+var xmlhttp = new XMLHttpRequest();
+var url = "";
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = JSON.parse(xmlhttp.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    energy = arr;
+}
 
 sankey
   .nodes(energy.nodes)
