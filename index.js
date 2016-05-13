@@ -47,84 +47,14 @@ var energy = {
   , {
     "name": "Decison"
   }, {
-    "name": "State1"
+    "name": "CTR INCREASED, INCREASE GOAL, DECREASE DCPM, ADD SEGMENT"
   }, {
-    "name": "State2"
+    "name": "CTR INCREASED, UNCHANGED GOAL, INCREASE DCPM, REMOVE SEGMENT"
   }, {
-    "name": "State3"
+    "name": "CTR UNCHANGED, UNCHANGED GOAL, UNCHANGE DCPM, ADD SEGMENT"
   }, {
-    "name": "State4"
-  } /*, {
-    "name": "Heating and cooling - commercial"
-  }, {
-    "name": "Heating and cooling - homes"
-  }, {
-    "name": "Electricity grid"
-  }, {
-    "name": "Over generation / exports"
-  }, {
-    "name": "H2 conversion"
-  }, {
-    "name": "Road transport"
-  }, {
-    "name": "Agriculture"
-  }, {
-    "name": "Rail transport"
-  }, {
-    "name": "Lighting & appliances - commercial"
-  }, {
-    "name": "Lighting & appliances - homes"
-  }, {
-    "name": "Gas imports"
-  }, {
-    "name": "Ngas"
-  }, {
-    "name": "Gas reserves"
-  }, {
-    "name": "Thermal generation"
-  }, {
-    "name": "Geothermal"
-  }, {
-    "name": "H2"
-  }, {
-    "name": "Hydro"
-  }, {
-    "name": "International shipping"
-  }, {
-    "name": "Domestic aviation"
-  }, {
-    "name": "International aviation"
-  }, {
-    "name": "National navigation"
-  }, {
-    "name": "Marine algae"
-  }, {
-    "name": "Nuclear"
-  }, {
-    "name": "Oil imports"
-  }, {
-    "name": "Oil"
-  }, {
-    "name": "Oil reserves"
-  }, {
-    "name": "Other waste"
-  }, {
-    "name": "Pumped heat"
-  }, {
-    "name": "Solar PV"
-  }, {
-    "name": "Solar Thermal"
-  }, {
-    "name": "Solar"
-  }, {
-    "name": "Tidal"
-  }, {
-    "name": "UK land based bioenergy"
-  }, {
-    "name": "Wave"
-  }, {
-    "name": "Wind"
-  } */
+    "name": "CTR INCREASED, UNCHANGED GOAL, INCREASE DCPM, REMOVE SEGMENT"
+  } 
   ],
   "links": [{
     "source": 0,
@@ -178,39 +108,39 @@ var energy = {
   }, {
     "source": 3,
     "target": 9,
-    "value": 46.184
+    "value": 46
   }, {
     "source": 4,
-    "target": 9,
-    "value": 104.453
+    "target": 10,
+    "value": 58
   }, {
     "source": 5,
-    "target": 10,
-    "value": 113.726
+    "target": 11,
+    "value": 33
   }, {
     "source": 6,
-    "target": 11,
-    "value": 27.14
+    "target": 12,
+    "value": 17
   } , {
     "source": 7,
     "target": 8,
-    "value": 342.165
+    "value": 58
   } , {
     "source": 9,
     "target": 7,
-    "value": 37.797
+    "value": 46
   }, {
     "source": 10,
     "target": 7,
-    "value": 4.412
+    "value": 58
   }, {
     "source": 11,
     "target": 7,
-    "value": 40.858
+    "value": 33
   }, {
     "source": 12,
     "target": 7,
-    "value": 56.691
+    "value": 17
   } , {
     "source": 6,
     "target": 12,
@@ -403,6 +333,21 @@ var energy = {
   ]
 };
 
+var xmlhttp = new XMLHttpRequest();
+var url = "";
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = JSON.parse(xmlhttp.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    energy = arr;
+}
 
 sankey
   .nodes(energy.nodes)
