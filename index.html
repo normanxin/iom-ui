@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="iom-app" xmlns:ng="http://angularjs.org">
 <meta charset="utf-8">
 <title>Sankey Diagram</title>
 <style>
@@ -30,12 +30,14 @@
 </style>
 
 <body>
-  <div id="context"></div>
-  <div id="middle"><div>
+  <div id="context" ng-controller="iom-controller"><ng-include src="'context.html'"></ng-include></div>
+  <div id="middle"><ng-include src="'middle.html'"></ng-include><div>
   <div id="chart"></div>
   <div id="compare"></div>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" charset="utf-8"></script>
   <script src="sankey.js"></script>
   <script src="index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="app.js">
+  <script src="app.js"></script>
+</body>
+  </html>
