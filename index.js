@@ -28,24 +28,25 @@ var path = sankey.link();
 
 var energy = {
   "nodes": [{
-    "name": "Agricultural 'waste'"
+    "name": "ICA"
   }, {
-    "name": "Bio-conversion"
+    "name": "Database"
   }, {
-    "name": "Liquid"
+    "name": "Human"
   }, {
-    "name": "Losses"
+    "name": "Agent Model"
   }, {
-    "name": "Solid"
+    "name": "Data Model"
   }, {
-    "name": "Gas"
+    "name": "Tree Model"
   }, {
-    "name": "Biofuel imports"
+    "name": "Human Model"
   }, {
-    "name": "Biomass imports"
-  }, {
-    "name": "Coal imports"
-  }, {
+    "name": "Decide"
+  }
+  , {
+    "name": "Decison"
+  } /*, {
     "name": "Coal"
   }, {
     "name": "Coal reserves"
@@ -123,76 +124,78 @@ var energy = {
     "name": "Wave"
   }, {
     "name": "Wind"
-  }],
+  } */
+  ],
   "links": [{
     "source": 0,
-    "target": 1,
-    "value": 124.729
-  }, {
-    "source": 1,
-    "target": 2,
-    "value": 0.597
+    "target": 3,
+    "value": 33.33
   }, {
     "source": 1,
     "target": 3,
-    "value": 26.862
+    "value": 33.33
+  }, {
+    "source": 2,
+    "target": 3,
+    "value": 33.33
+  }, {
+    "source": 0,
+    "target": 4,
+    "value": 22
   }, {
     "source": 1,
     "target": 4,
-    "value": 280.322
-  }, {
-    "source": 1,
-    "target": 5,
     "value": 81.144
   }, {
-    "source": 6,
-    "target": 2,
-    "value": 35
-  }, {
-    "source": 7,
+    "source": 2,
     "target": 4,
     "value": 35
   }, {
-    "source": 8,
-    "target": 9,
+    "source": 0,
+    "target": 5,
+    "value": 35
+  } , {
+    "source": 1,
+    "target": 5,
     "value": 11.606
-  }, {
-    "source": 10,
-    "target": 9,
+  }
+  , {
+    "source": 2,
+    "target": 5,
     "value": 63.965
   }, {
-    "source": 9,
-    "target": 4,
+    "source": 0,
+    "target": 6,
     "value": 75.571
   }, {
-    "source": 11,
-    "target": 12,
+    "source": 1,
+    "target": 6,
     "value": 10.639
   }, {
-    "source": 11,
-    "target": 13,
+    "source": 2,
+    "target": 6,
     "value": 22.505
   }, {
-    "source": 11,
-    "target": 14,
+    "source": 3,
+    "target": 7,
     "value": 46.184
   }, {
-    "source": 15,
-    "target": 16,
+    "source": 4,
+    "target": 7,
     "value": 104.453
   }, {
-    "source": 15,
-    "target": 14,
+    "source": 5,
+    "target": 7,
     "value": 113.726
   }, {
-    "source": 15,
-    "target": 17,
+    "source": 6,
+    "target": 7,
     "value": 27.14
-  }, {
-    "source": 15,
-    "target": 12,
+  } , {
+    "source": 7,
+    "target": 8,
     "value": 342.165
-  }, {
+  } /*, {
     "source": 15,
     "target": 18,
     "value": 37.797
@@ -396,7 +399,8 @@ var energy = {
     "source": 47,
     "target": 15,
     "value": 289.366
-  }]
+  } */
+  ]
 };
 
 
