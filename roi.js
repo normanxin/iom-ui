@@ -15,7 +15,7 @@ angular.module('iom-app')
         console.log(res);
       });
       $scope.$watch(function() {
-        return $rootScope.selectedLI
+        return $rootScope.selectedLI;
       }, function(selected) {
         $scope.names = selected;
         $scope.names = [

@@ -9,12 +9,12 @@
     <title>Sankey Diagram</title>
   </head>
   <body>
-  	<input-data></input-data>
-    <context context-data="data" id="id"></context>
-    <progress-bar id="id"></progress-bar>
+  	<div style="width:600px; height: 300px; display:inline-block"><input-data></input-data></div>
+    <div style="width:900px; height: 300px; display:inline-block"><context context-data="data" id="id"></context></div>
+    <!--progress-bar id="id"></progress-bar-->
     <div id="middle"><div>
-    <roi roi-data="data"></roi>
-    <div id="chart"></div>
+    <div style="width:600px; height: 600px; display:inline-block"><roi roi-data="data"></roi></div>
+    <div style="width:900px; height: 600px; display:inline-block"><div id="chart"></div></div>
     <script src="Chart.js"></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" charset="utf-8"></script>

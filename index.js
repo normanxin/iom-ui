@@ -46,15 +46,15 @@ var energy = {
   }
   , {
     "name": "Decison"
+  }, {
+    "name": "State1"
+  }, {
+    "name": "State2"
+  }, {
+    "name": "State3"
+  }, {
+    "name": "State4"
   } /*, {
-    "name": "Coal"
-  }, {
-    "name": "Coal reserves"
-  }, {
-    "name": "District heating"
-  }, {
-    "name": "Industry"
-  }, {
     "name": "Heating and cooling - commercial"
   }, {
     "name": "Heating and cooling - homes"
@@ -177,45 +177,45 @@ var energy = {
     "value": 22.505
   }, {
     "source": 3,
-    "target": 7,
+    "target": 9,
     "value": 46.184
   }, {
     "source": 4,
-    "target": 7,
+    "target": 9,
     "value": 104.453
   }, {
     "source": 5,
-    "target": 7,
+    "target": 10,
     "value": 113.726
   }, {
     "source": 6,
-    "target": 7,
+    "target": 11,
     "value": 27.14
   } , {
     "source": 7,
     "target": 8,
     "value": 342.165
-  } /*, {
-    "source": 15,
-    "target": 18,
+  } , {
+    "source": 9,
+    "target": 7,
     "value": 37.797
   }, {
-    "source": 15,
-    "target": 19,
+    "source": 10,
+    "target": 7,
     "value": 4.412
   }, {
-    "source": 15,
-    "target": 13,
+    "source": 11,
+    "target": 7,
     "value": 40.858
   }, {
-    "source": 15,
-    "target": 3,
+    "source": 12,
+    "target": 7,
     "value": 56.691
-  }, {
-    "source": 15,
-    "target": 20,
+  } , {
+    "source": 6,
+    "target": 12,
     "value": 7.863
-  }, {
+  } /*, {
     "source": 15,
     "target": 21,
     "value": 90.008
