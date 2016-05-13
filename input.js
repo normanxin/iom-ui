@@ -5,6 +5,12 @@ angular.module('iom-app')
     //transclude: true,
     scope: {},
     templateUrl: 'input.html',
+    controller: function($rootScope, $scope) {
+        $scope.select = function(s) {
+          s.selected = true;
+          $rootScope.selectedLI = s;
+        };
+    },
     link: function(scope) {
     	    scope.names = [
     	       {id: 1, endDate: 2, clicks: 3, impressions: 4},
