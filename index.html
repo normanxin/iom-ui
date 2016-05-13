@@ -9,10 +9,11 @@
     <title>Sankey Diagram</title>
   </head>
   <body>
-    <context></context>
-    <progress-bar></progress-bar>
+  	<input-data></input-data>
+    <context context-data="data" id="id"></context>
+    <progress-bar id="id"></progress-bar>
     <div id="middle"><div>
-    <roi></roi>
+    <roi roi-data="data"></roi>
     <div id="chart"></div>
     <script src="Chart.js"></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -31,5 +32,6 @@
     <script src="context.js"></script>
     <script src="progressBar.js"></script>
     <script src="roi.js"></script>
+    <script src="input.js"></script>
   </body>
 </html>
